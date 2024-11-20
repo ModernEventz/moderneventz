@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import ICarousel from '@/components/Icarousel';
 import { StarFilledIcon } from '@radix-ui/react-icons';
 
-import { getAllVendors, getSearchVendors, getVendorsByCategory } from "@/lib/actions/vendor.action";
+import {  getSearchVendors, getVendorsByCategory } from "@/lib/actions/vendor.action";
 import Link from "next/link";
 import { useSearchParams } from 'next/navigation';
 import Spinner from '@/components/spinner';
