@@ -91,7 +91,7 @@ export function DataTable<TData, TValue>({
           accessorKey: "category",
            header: "Category",
            cell: ({ row }) => {
-            const category = row.getValue("category")
+            const category:any = row.getValue("category")
             return <Badge variant="outline">{category}</Badge>
        
            
