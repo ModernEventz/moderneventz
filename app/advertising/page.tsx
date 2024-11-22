@@ -79,7 +79,7 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              rows="5"
+              rows={5}
               required
             ></textarea>
           </div>
