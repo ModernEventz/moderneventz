@@ -1,9 +1,9 @@
-
+"use server"
 
 import { DataTable } from "./data-table"
 import { currentUser } from '@clerk/nextjs';
 import { getCheckListById } from "@/lib/actions/checkList.actions";
-
+import {  columns } from "./columns"
 
 
 
@@ -19,7 +19,8 @@ export default async function Page() {
 
   return (
     <div className="container mx-auto py-10">
-      <DataTable  data={data} columns={[]} />
+      <DataTable  data={data} columns={columns} />
     </div>
   )
 }
+
