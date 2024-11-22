@@ -12,12 +12,12 @@ const Contact = () => {
     message: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     // Handle form submission, e.g., send data to the server or email
     alert('Thank you for contacting us!');
