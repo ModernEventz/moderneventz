@@ -26,7 +26,7 @@ interface Errors {
   numberOfGuests?: string;
 }
 
-export default function BookingWidget({vendorId:any,profile_id:string,price,vendorName,username,email,path }) {
+export default function BookingWidget({vendorId:any,profile_id:string,price,vendorName,username:any,email,path }) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [numberOfGuests, setNumberOfGuests] = useState("");
