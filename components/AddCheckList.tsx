@@ -106,10 +106,10 @@ const AddCheckList = ({}) => {
       console.log('Form submitted', formState);
 
 
-      const  { data, error } =  await submitCheckList({ status,title,category,date, path: `/Clist`})
+      const response:any|null =  await submitCheckList({ status,title,category,date, path: `/Clist`})
  
-      if (error) {
-       console.error('Error fetching data:', error.message);
+      if (!response) {
+       console.error('Error fetching data');
        } else {
          toast({
            description: "Task successfully  added.",
