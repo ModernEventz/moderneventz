@@ -100,7 +100,7 @@ const AddBudget = ({}) => {
     
 
    // Update or insert the user's rating into the Supabase database
-  const  {  error }:any[]|null =  await submitBudget({ status,item,cost, path: `/budget`})
+  const  {  error:any } =  await submitBudget({ status,item,cost, path: `/budget`})
  
    if (error) {
     console.error('Error fetching vendor data:', error.message);
