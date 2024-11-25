@@ -27,23 +27,20 @@ interface Errors {
 }
 
 
-export interface BookingParams {
+export interface BookingWidgetParams {
   profile_id: string;
   vendorId: string;
   price:number;
   username: any;
   vendorName:string
   email: any;
-  date:string;
-  time:string;
-  message:string;
-  numberOfGuests:string;
-  phoneNumber:string;
+  path:string;
+ 
   
 }
 
 
-export default function BookingWidget({vendorId,profile_id,price,vendorName,username,email,path } : BookingParams) {
+export default function BookingWidget({vendorId,profile_id,price,vendorName,username,email,path } : BookingWidgetParams) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [numberOfGuests, setNumberOfGuests] = useState("");
