@@ -21,7 +21,7 @@ import { Badge } from "@/components/ui/badge"
  
 
 
-const DeleteBudget = ({budgetId}) => {
+const DeleteBudget = ({budgetId}:any) => {
  
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [isModalOpen, setIsModalOpen] = useState(true);
