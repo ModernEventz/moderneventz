@@ -45,7 +45,7 @@ const EditBudget = ({budgetItem,budgetcost,budgetStatus,budgetId}) => {
      
     
      // Update or insert the user's rating into the Supabase database
-     const  response any|null =  await updateBudgetById({ budgetId,item,cost,status, path: `/budget`})
+     const  response: any|null =  await updateBudgetById({ budgetId,item,cost,status, path: `/budget`})
  
      if (!response) {
       console.error('Error fetching vendor data:', error.message);
