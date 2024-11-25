@@ -32,7 +32,7 @@ export interface BookingParams {
   vendorId: string;
   price:number;
   username: string;
-  email: string;
+  email: string|undefined;
   date:string;
   time:string;
   message:string;
