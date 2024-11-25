@@ -48,7 +48,7 @@ const EditBudget = ({budgetItem,budgetcost,budgetStatus,budgetId}:any) => {
      const  response: any|null =  await updateBudgetById({ budgetId,item,cost,status, path: `/budget`})
  
      if (!response) {
-      console.error('Error fetching vendor data:', error.message);
+      console.error('Error fetching vendor data');
       } else {
         toast({
           description: "Budget successfully  updated.",
