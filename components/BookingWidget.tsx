@@ -129,10 +129,10 @@ export default function BookingWidget({vendorId,profile_id,price,vendorName,user
     if (!validateForm()) return;
      // Update or insert the user's rating into the Supabase database
      setLoading(true);
-     const { data, error } =  await BookVendor({ vendorId,profile_id,message,email,date,time,price,username,numberOfGuests,phoneNumber  })
+     const response:any|null =  await BookVendor({ vendorId,profile_id,message,email,date,time,price,username,numberOfGuests,phoneNumber  })
  
-     if (error) {
-      console.error('Error fetching vendor data:', error.message);
+     if (!response) {
+      console.error('Error fetching vendor data);
       } else {
        
         toast({
