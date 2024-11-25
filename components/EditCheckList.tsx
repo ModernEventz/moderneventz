@@ -41,7 +41,7 @@ const EditCheckList = ({checkListTitle,checkListCategory,checkListStatus,checkLi
     setStatus(value);
   };
 
-  const handleDropdownChange = (event) => {
+  const handleDropdownChange = (event:any) => {
     const selectedValue = event.target.value;
     setCategory(selectedValue);
   };
