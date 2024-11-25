@@ -37,10 +37,10 @@ const DeleteBudget = ({budgetId}:any) => {
      
     
      // Update or insert the user's rating into the Supabase database
-     const  {  error } =  await deleteBudgetById({ budgetId, path: `/budget`})
+     const  response:any|null =  await deleteBudgetById({ budgetId, path: `/budget`})
  
-     if (error) {
-      console.error('Error fetching vendor data:', error.message);
+     if (!response) {
+      console.error('Error fetching vendor data');
       } else {
         toast({
           description: "Budget successfully  updated.",
