@@ -36,7 +36,7 @@ const EditBudget = ({budgetItem,budgetcost,budgetStatus,budgetId}:any) => {
 
   }, [budgetItem, budgetcost,budgetStatus]);
  
-  const handleRadioChange = (value) => {
+  const handleRadioChange = (value:any) => {
     setStatus(value);
   };
 
