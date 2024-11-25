@@ -30,9 +30,7 @@ const DeleteBudget = ({budgetId}:any) => {
 
 
  
-  const handleRadioChange = (value:any) => {
-    setStatus(value);
-  };
+
 
   const handleSubmitClick = async () => {
     
