@@ -132,7 +132,7 @@ export default function BookingWidget({vendorId,profile_id,price,vendorName,user
      const response:any|null =  await BookVendor({ vendorId,profile_id,message,email,date,time,price,username,numberOfGuests,phoneNumber  })
  
      if (!response) {
-      console.error('Error fetching vendor data);
+      console.error('Error fetching vendor data');
       } else {
        
         toast({
