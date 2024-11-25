@@ -40,7 +40,7 @@ export interface BookingParams {
   
 }
 
-export default function BookingWidget<BookingParams>({vendorId:any,profile_id,price,vendorName,username,email,path }) {
+export default function BookingWidget<BookingParams>({vendorId,profile_id,price,vendorName,username,email,path }) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [numberOfGuests, setNumberOfGuests] = useState("");
