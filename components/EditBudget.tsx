@@ -19,7 +19,7 @@ import Link from 'next/link';
  
 
 
-const EditBudget = ({budgetItem,budgetcost,budgetStatus,budgetId}) => {
+const EditBudget = ({budgetItem,budgetcost,budgetStatus,budgetId}:any) => {
   const options = ['Paid', 'Not Paid' ];
   const [item, setItem] = useState("");
   const [cost, setCost] = useState(0);
