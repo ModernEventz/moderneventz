@@ -31,9 +31,9 @@ export interface BookingParams {
   profile_id: string;
   vendorId: string;
   price:number;
-  username: string;
+  username: any;
   vendorName:string
-  email: string;
+  email: any;
   date:string;
   time:string;
   message:string;
