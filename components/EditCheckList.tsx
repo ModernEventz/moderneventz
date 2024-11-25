@@ -16,7 +16,7 @@ import { updateCheckListById } from '@/lib/actions/checkList.actions';
  
 
 
-const EditCheckList = ({checkListTitle,checkListCategory,checkListStatus,checkListDate,checkListId}) => {
+const EditCheckList = ({checkListTitle,checkListCategory,checkListStatus,checkListDate,checkListId}:any) => {
   const options = ['Todo', 'In Progress','Done','Cancelled' ];
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
@@ -37,7 +37,7 @@ const EditCheckList = ({checkListTitle,checkListCategory,checkListStatus,checkLi
 
   }, [checkListTitle,checkListCategory,checkListDate,checkListStatus]);
  
-  const handleRadioChange = (value) => {
+  const handleRadioChange = (value:any) => {
     setStatus(value);
   };
 
