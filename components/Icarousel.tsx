@@ -14,7 +14,7 @@ import {
 const Dots = ({ images, currentIndex, setCurrentIndex }:any) => {
   return (
     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-      {images.map((_, index) => (
+      {images.map(( index) => (
         <div
           key={index}
           onClick={() => setCurrentIndex(index)}
@@ -27,7 +27,7 @@ const Dots = ({ images, currentIndex, setCurrentIndex }:any) => {
   );
 };
 
-const ICarousel = ({ images,href }) => {
+const ICarousel = ({ images,href } :any) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   return (
