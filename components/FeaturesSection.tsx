@@ -19,7 +19,7 @@ import {
 import UserCard from "./cards/UserCard";
 import CarouselCards from "./carouselCards";
 async function getData({searchParams}: {searchParams?: { filter?: string}}) {
-  const data = await getVendorsByCategoryNoPagination({ category: searchParams?.filter }:any)
+  const data = await getVendorsByCategoryNoPagination({ category: any })
   return data;
 }
 
