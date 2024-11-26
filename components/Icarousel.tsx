@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const Dots = ({ images:any, currentIndex, setCurrentIndex }) => {
+const Dots = ({ images, currentIndex, setCurrentIndex }:any) => {
   return (
     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
       {images.map((_, index) => (
