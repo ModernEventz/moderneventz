@@ -33,7 +33,7 @@ const ICarousel = ({ images,href } :any) => {
   return (
     <Carousel className="relative w-full max-w-xs group">
       <CarouselContent>
-        {images.map((image, index) => (
+        {images.map((image, index):any => (
           <CarouselItem key={index}>
           <Link href={href}> <div >
               <Image
