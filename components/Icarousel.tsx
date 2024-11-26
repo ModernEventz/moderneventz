@@ -14,7 +14,7 @@ import {
 const Dots = ({ images, currentIndex, setCurrentIndex }:any) => {
   return (
     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-      {images.map(( index) => (
+      {images.map(( index:any) => (
         <div
           key={index}
           onClick={() => setCurrentIndex(index)}
