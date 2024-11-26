@@ -289,6 +289,7 @@ export interface GetHiredVendorByIdParams {
 export interface submitHiredVendorParams {
   profile_id: string;
   vendor_id: string;
+  vendor_name: string;
   location : string;
   price : string;
   rating:number;
