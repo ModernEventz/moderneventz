@@ -5,7 +5,7 @@ import {createServerComponentClient} from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers';
 import { currentUser } from '@clerk/nextjs';
 import { revalidatePath } from "next/cache";
-import { DeleteBudgetByIdParams, GetBudgetByIdParams, SubmitBudgetParams, UpdateBudgetByIdParams, deleteBudgetByIdParams } from './shared.types';
+import { DeleteBudgetByIdParams, GetBudgetByIdParams, SubmitBudgetParams, UpdateBudgetByIdParams } from './shared.types';
 
 export async function getBudgetById(params:GetBudgetByIdParams ) {
     try {
