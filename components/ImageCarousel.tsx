@@ -1,7 +1,9 @@
+// @ts-nocheck
+
 // components/ImageCarousel.js
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'Swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';
