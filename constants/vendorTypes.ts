@@ -5,7 +5,7 @@ export default  vendorTypes = [
     {
       id: 0,
       title: "Venue ",
-      image: ("/assets/images/venue2.jpg"),
+      image: ("/assets/images/africanVenue.webp"),
       url:'/venueListing?category=venue'
      
     },
