@@ -96,7 +96,7 @@ const Page = async ({ searchParams }: SearchParamsProps) => {
          <CardContent className="space-y-2">
          <section className="mt-12 flex flex-wrap gap-4">
        {hiredVendors.length > 0 ? (
-         hiredVendors.map((vendor)=> (
+         hiredVendors.map((vendor:any)=> (
           <Link href={''}  key={vendor.vendor_id}> 
           <div className="mb-2 flex rounded-2xl ">
                 {/* image carousel */}

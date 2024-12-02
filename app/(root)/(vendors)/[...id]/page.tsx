@@ -20,7 +20,7 @@ import SimilarVendors from "@/components/SimilarVendors";
 import MarkAsHired from "@/components/MarkAsHired";
 
 
-const generateAvatar = (name) => {
+const generateAvatar = (name:any) => {
   const initials = name ? name[0].toUpperCase() : '?'; // Use '?' if name is not provided
   const avatarUrl = `https://ui-avatars.com/api/?name=${initials}`;
 

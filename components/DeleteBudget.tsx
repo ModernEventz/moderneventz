@@ -21,7 +21,7 @@ import { Badge } from "@/components/ui/badge"
  
 
 
-const DeleteBudget = ({budgetId}) => {
+const DeleteBudget = ({budgetId}:any) => {
  
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -30,19 +30,17 @@ const DeleteBudget = ({budgetId}) => {
 
 
  
-  const handleRadioChange = (value) => {
-    setStatus(value);
-  };
+
 
   const handleSubmitClick = async () => {
     
      
     
      // Update or insert the user's rating into the Supabase database
-     const  {  error } =  await deleteBudgetById({ budgetId, path: `/budget`})
+     const  response:any|null =  await deleteBudgetById({ budgetId, path: `/budget`})
  
-     if (error) {
-      console.error('Error fetching vendor data:', error.message);
+     if (!response) {
+      console.error('Error fetching vendor data');
       } else {
         toast({
           description: "Budget successfully  updated.",

@@ -61,7 +61,7 @@ export default function SearchResults() {
       ) : (
         <>
            <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-3">  
-          {results.map((result) => (
+          {results.map((result:any) => (
       
           <Link href={''} key={result.vendor_id}  > 
           <div className="mb-2 flex rounded-2xl ">

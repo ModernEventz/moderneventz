@@ -11,10 +11,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const Dots = ({ images, currentIndex, setCurrentIndex }) => {
+const Dots = ({ images, currentIndex, setCurrentIndex }:any) => {
   return (
     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-      {images.map((_, index) => (
+      {images.map(( index:any) => (
         <div
           key={index}
           onClick={() => setCurrentIndex(index)}
@@ -27,13 +27,13 @@ const Dots = ({ images, currentIndex, setCurrentIndex }) => {
   );
 };
 
-const ICarousel = ({ images,href }) => {
+const ICarousel = ({ images,href } :any) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   return (
     <Carousel className="relative w-full max-w-xs group">
       <CarouselContent>
-        {images.map((image, index) => (
+        {images.map((image:any, index:any) => (
           <CarouselItem key={index}>
           <Link href={href}> <div >
               <Image

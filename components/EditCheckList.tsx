@@ -16,7 +16,7 @@ import { updateCheckListById } from '@/lib/actions/checkList.actions';
  
 
 
-const EditCheckList = ({checkListTitle,checkListCategory,checkListStatus,checkListDate,checkListId}) => {
+const EditCheckList = ({checkListTitle,checkListCategory,checkListStatus,checkListDate,checkListId}:any) => {
   const options = ['Todo', 'In Progress','Done','Cancelled' ];
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
@@ -37,11 +37,11 @@ const EditCheckList = ({checkListTitle,checkListCategory,checkListStatus,checkLi
 
   }, [checkListTitle,checkListCategory,checkListDate,checkListStatus]);
  
-  const handleRadioChange = (value) => {
+  const handleRadioChange = (value:any) => {
     setStatus(value);
   };
 
-  const handleDropdownChange = (event) => {
+  const handleDropdownChange = (event:any) => {
     const selectedValue = event.target.value;
     setCategory(selectedValue);
   };
@@ -51,10 +51,10 @@ const EditCheckList = ({checkListTitle,checkListCategory,checkListStatus,checkLi
      
     
      // Update or insert the user's rating into the Supabase database
-     const  { data, error } =  await updateCheckListById({ checkListId,title,status,date,category, path: `/Clist`})
+     const  response :any|null =  await updateCheckListById({ checkListId,title,status,date,category, path: `/Clist`})
  
-     if (error) {
-      console.error('Error fetching checklist data:', error.message);
+     if (!response) {
+      console.error('Error fetching checklist data');
       } else {
         toast({
           description: "CheckList successfully  updated.",

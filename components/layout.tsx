@@ -1,3 +1,4 @@
+// @ts-nocheck
 // import Filter from '@/components/shared/Filter'
 
 // import LocalSearchbar from '@/components/shared/search/LocalSearchbar'

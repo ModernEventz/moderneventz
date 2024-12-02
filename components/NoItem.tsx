@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { File, FileQuestion } from "lucide-react";
 
 interface IappProps {

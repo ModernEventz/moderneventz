@@ -1,4 +1,5 @@
 
+ 
 "use client"
 
 import * as React from "react"
@@ -13,10 +14,7 @@ import { ColumnDef ,
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import {Budget } from "@/types/collections";
 
-import { Badge } from "@/components/ui/badge"
-import { Checkbox } from "@/components/ui/checkbox"
 import { setTotalBudget } from "@/lib/Store/slice";
 import {  useDispatch } from 'react-redux'
 import {
@@ -29,8 +27,7 @@ import {
   } from "@/components/ui/table"
 import { Input } from "@/components/ui/input"
 import AddBudget from "@/components/AddBudget"
-import EditBudget from "@/components/EditBudget"
-import DeleteBudget from "@/components/DeleteBudget"
+
 
 
 interface DataTableProps<TData, TValue> {
@@ -41,8 +38,8 @@ interface DataTableProps<TData, TValue> {
  
   
 export function DataTable<TData, TValue>({
-  
-  data,
+  columns,
+  data
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -54,82 +51,7 @@ export function DataTable<TData, TValue>({
 
     const dispatch = useDispatch()
 
-    const columns: ColumnDef<Budget>[] = [
-  
-      {
-        id: "select",
-        header: ({ table }) => (
-          <Checkbox
-            checked={
-              table.getIsAllPageRowsSelected() ||
-              (table.getIsSomePageRowsSelected() && "indeterminate")
-            }
-            onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-            aria-label="Select all"
-            className="border-rose-600"
-          />
-        ),
-        cell: ({ row }) => (
-          <Checkbox
-            checked={row.getIsSelected()}
-            onCheckedChange={(value) => row.toggleSelected(!!value)}
-            aria-label="Select row"
-            className="border-rose-600"
-          />
-        ),
-      },
-    
-        {
-          accessorKey: "status",
-          header: "Status",
-        },
-        {
-          accessorKey: "item",
-           header: "Item"
-        },
-        {
-          accessorKey: "cost",
-          header: () => <div>Cost</div>,
-          cell: ({ row }) => {
-            const cost = parseFloat(row.getValue("cost"))
-            const formatted = new Intl.NumberFormat("en-US", {
-              style: "currency",
-              currency: "GHS",
-            }).format(cost)
-       
-            return <div className=" font-medium">{formatted}</div>
-          },
-          
-        },
-          {
-            accessorKey: "id",
-            header: "",
-            cell: ({ row }) => {
-              const payment = row.original
-         
-              return (
-                <EditBudget budgetId={payment.budget_id} budgetItem={payment.item} budgetcost={payment.cost} budgetStatus={payment.status}/>
-              )
-            },
-          },
-
-          {
-            accessorKey: "actions",
-            header: "",
-            cell: ({ row }) => {
-              const payment = row.original
-         
-              return (
-                <DeleteBudget budgetId={payment.budget_id}  />
-              )
-            },
-          },
-    ]
-    
-
-
-
-
+   
 
 
   const table = useReactTable({

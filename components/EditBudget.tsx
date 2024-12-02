@@ -19,7 +19,7 @@ import Link from 'next/link';
  
 
 
-const EditBudget = ({budgetItem,budgetcost,budgetStatus,budgetId}) => {
+const EditBudget = ({budgetItem,budgetcost,budgetStatus,budgetId}:any) => {
   const options = ['Paid', 'Not Paid' ];
   const [item, setItem] = useState("");
   const [cost, setCost] = useState(0);
@@ -36,7 +36,7 @@ const EditBudget = ({budgetItem,budgetcost,budgetStatus,budgetId}) => {
 
   }, [budgetItem, budgetcost,budgetStatus]);
  
-  const handleRadioChange = (value) => {
+  const handleRadioChange = (value:any) => {
     setStatus(value);
   };
 
@@ -45,10 +45,10 @@ const EditBudget = ({budgetItem,budgetcost,budgetStatus,budgetId}) => {
      
     
      // Update or insert the user's rating into the Supabase database
-     const  { data, error } =  await updateBudgetById({ budgetId,item,cost,status, path: `/budget`})
+     const  response: any|null =  await updateBudgetById({ budgetId,item,cost,status, path: `/budget`})
  
-     if (error) {
-      console.error('Error fetching vendor data:', error.message);
+     if (!response) {
+      console.error('Error fetching vendor data');
       } else {
         toast({
           description: "Budget successfully  updated.",

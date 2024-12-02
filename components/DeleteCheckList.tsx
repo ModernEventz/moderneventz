@@ -13,7 +13,7 @@ import { deleteCheckListById } from '@/lib/actions/checkList.actions';
  
 
 
-const DeleteCheckList = ({checkListId}) => {
+const DeleteCheckList = ({checkListId}:any) => {
  
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -22,19 +22,17 @@ const DeleteCheckList = ({checkListId}) => {
 
 
  
-  const handleRadioChange = (value) => {
-    setStatus(value);
-  };
+
 
   const handleSubmitClick = async () => {
     
      
     
      // Update or insert the user's rating into the Supabase database
-     const  {  error } =  await deleteCheckListById({ checkListId, path: `/Clist`})
+     const response :any|null =  await deleteCheckListById({ checkListId, path: `/Clist`})
  
-     if (error) {
-      console.error('Error fetching  data:', error.message);
+     if (!response) {
+      console.error('Error fetching  data');
       } else {
         toast({
           description: "CheckList successfully  Deleted.",

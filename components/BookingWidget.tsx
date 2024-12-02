@@ -26,7 +26,21 @@ interface Errors {
   numberOfGuests?: string;
 }
 
-export default function BookingWidget({vendorId,profile_id,price,vendorName,username,email,path }) {
+
+export interface BookingWidgetParams {
+  profile_id: string;
+  vendorId: string;
+  price:number;
+  username: any;
+  vendorName:string
+  email: any;
+  path:string;
+ 
+  
+}
+
+
+export default function BookingWidget({vendorId,profile_id,price,vendorName,username,email,path } : BookingWidgetParams) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [numberOfGuests, setNumberOfGuests] = useState("");
@@ -115,10 +129,10 @@ export default function BookingWidget({vendorId,profile_id,price,vendorName,user
     if (!validateForm()) return;
      // Update or insert the user's rating into the Supabase database
      setLoading(true);
-     const { data, error } =  await BookVendor({ vendorId,profile_id,message,email,date,time,price,username,numberOfGuests,phoneNumber  })
+     const response:any|null =  await BookVendor({ vendorId,profile_id,message,email,date,time,price,username,numberOfGuests,phoneNumber  })
  
-     if (error) {
-      console.error('Error fetching vendor data:', error.message);
+     if (!response) {
+      console.error('Error fetching vendor data');
       } else {
        
         toast({
