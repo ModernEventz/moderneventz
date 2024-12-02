@@ -12,7 +12,7 @@ export default  vendorTypes = [
     {
       id: 1,
       title: "Caterer",
-      image: ("/assets/images/catering.webp"),
+      image: ("/assets/images/caterer2.jpg"),
       url:'/catererListing?category=caterer'
      
     },
