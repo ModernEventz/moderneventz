@@ -33,7 +33,7 @@ const Footer = () => {
               <a href="/advertising" className="hover:text-gray-400">Advertising</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="hover:text-gray-400">Sign up as a vendor</a>
+              <a href="https://moderneventsghvendors.com/" className="hover:text-gray-400">Sign up as a vendor</a>
             </li>
  
           </ul>
