@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="mb-4 lg:mb-0">
           <p className="text-lg font-semibold">Modern Eventz</p>
           <p className="text-sm">osborn juncion, Kumasi, Ghana</p>
-          <p className="text-sm">info@moderneventz.com</p>
+          <p className="text-sm">info@moderneventsgh.com</p>
         </div>
         <div className="mb-4 lg:mb-0">
           <p className="text-lg font-semibold">Quick Links</p>
