@@ -12,7 +12,7 @@ const VendorSection = () => {
       <div className="md:ml-8">
         <h2 className="mb-4 text-3xl font-bold">Discover top wedding vendors</h2>
         <p className="mb-6 text-lg text-slate-500">
-        Event Parlour helps you find the best vendors for your wedding. From photographers to florists, we have a curated selection of professionals to make your special day perfect.
+        Modern Events helps you find the best vendors for your wedding. From photographers to florists, we have a curated selection of professionals to make your special day perfect.
         </p>
        
       </div>
