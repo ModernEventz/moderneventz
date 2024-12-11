@@ -7,6 +7,8 @@ import { SignedOut,SignedIn } from "@clerk/nextjs";
 const Header = () => {
   return (
     <header className="bg-[#b4245d] p-4 text-white">
+        <meta name="description" content="A description of my app for search engines" />
+        <meta name="robots" content="index, follow" />
     <div className="flex items-center justify-between">
       <div className='flex flex-row gap-x-5'>
     <Link href="/">
