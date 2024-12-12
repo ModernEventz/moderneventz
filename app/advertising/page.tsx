@@ -12,6 +12,8 @@ const Contact = () => {
     message: '',
   });
 
+   const [btnText, setBtnText] = useState('Submit');
+  
   const handleChange = (e:any) => {
     const { name, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
@@ -19,7 +21,29 @@ const Contact = () => {
 
   const handleSubmit = (e:any) => {
     e.preventDefault();
+     setBtnText('Sending...');
     // Handle form submission, e.g., send data to the server or email
+    
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+       
+      });
+
+      if (response.ok) {
+       
+        console.log('Email sent successfully');
+        setBtnText('Submitted');
+      } else {
+        console.error('Error sending email:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+    
     alert('Thank you for contacting us!');
   };
 
@@ -84,7 +108,7 @@ const Contact = () => {
             ></textarea>
           </div>
 
-          <button type="submit">Send Message</button>
+          <button type="submit">{btnText}</button>
         </form>
       </section>
 
