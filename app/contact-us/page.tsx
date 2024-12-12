@@ -91,9 +91,9 @@ const Contact = () => {
       {/* Contact Information Section */}
       <section className="contact-info">
         <h2>Our Contact Information</h2>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: info@eventplanner.com</p>
-        <p>Address: 123 Event St, City, Country</p>
+        <p>Phone:0503826189</p>
+        <p>Email: info.moderneventsgh.com</p>
+        <p>Address: Osborne junction tafo newroad, kumasi,Ghana</p>
       </section>
 
   
