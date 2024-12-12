@@ -14,12 +14,12 @@ const Contact = () => {
 
    const [btnText, setBtnText] = useState('Submit');
   
-  const handleChange = (e:any) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
      setBtnText('Sending...');
     // Handle form submission, e.g., send data to the server or email
