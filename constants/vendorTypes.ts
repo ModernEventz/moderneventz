@@ -98,4 +98,11 @@ export default  vendorTypes = [
       url:'/transportListing?category=invitation-card'
    
     },
+    {
+      id: 14,
+      title: "Ushers",
+      image: ("/assets/images/ushers.jpg"),
+      url:'/transportListing?category=ushers'
+   
+    },
   ];
