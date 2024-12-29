@@ -91,4 +91,11 @@ export default  vendorTypes = [
       url:'/transportListing?category=cake'
    
     },
+          {
+      id: 13,
+      title: "invitation Cards",
+      image: ("/assets/images/invitation-card.jpg"),
+      url:'/transportListing?category=invitation-card'
+   
+    },
   ];
