@@ -19,7 +19,7 @@ const Contact = () => {
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
      setBtnText('Sending...');
     // Handle form submission, e.g., send data to the server or email

@@ -71,4 +71,31 @@ export default  vendorTypes = [
       url:'/transportListing?category=transport'
    
     },
+        {
+      id: 10,
+      title: "Sound System",
+      image: ("/assets/images/sound-system.jpg"),
+      url:'/transportListing?category=sound'
+   
+    },    {
+      id: 11,
+      title: "Chairs&Canopy",
+      image: ("/assets/images/canopy-chairs.jpg"),
+      url:'/transportListing?category=canopy-chairs'
+   
+    },
+        {
+      id: 12,
+      title: "Cake",
+      image: ("/assets/images/wedding-cake.jpg"),
+      url:'/transportListing?category=cake'
+   
+    },
+          {
+      id: 13,
+      title: "invitation Cards",
+      image: ("/assets/images/invitation-card.jpg"),
+      url:'/transportListing?category=invitation-card'
+   
+    },
   ];
