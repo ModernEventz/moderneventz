@@ -44,6 +44,7 @@ export default function SearchForm() {
           <option value="canopy-chairs">Canopy&Chairs</option>
           <option value="sound">Sound System</option>
           <option value="cake">Cake</option>
+           <option value="invitation-card">Invitation Card</option>
           {/* Add more vendor types as needed */}
         </select>
 
