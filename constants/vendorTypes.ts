@@ -5,14 +5,14 @@ export default  vendorTypes = [
     {
       id: 0,
       title: "Venue ",
-      image: ("/assets/images/decor.jpg"),
+      image: ("/assets/images/venue.jpg"),
       url:'/venueListing?category=venue'
      
     },
     {
       id: 1,
       title: "Caterer",
-      image: ("/assets/images/caterer2.jpg"),
+      image: ("/assets/images/caterer.jpg"),
       url:'/catererListing?category=caterer'
      
     },
