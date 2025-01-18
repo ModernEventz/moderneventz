@@ -81,7 +81,7 @@ export default  vendorTypes = [
       id: 11,
       title: "Chairs&Canopy",
       image: ("/assets/images/canopy-chairs.jpg"),
-      url:'/transportListing?category=canopy-chairs'
+      url:'/transportListing?category=canopy'
    
     },
         {
