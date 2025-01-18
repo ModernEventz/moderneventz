@@ -227,7 +227,7 @@ const Page = async ({ params }: ParamsProps) => {
 
         <div>
         <div className="flex flex-row"><p className=" ml-10 text-lg font-bold">Location:</p><p className="ml-2">{profile[0].location}</p></div>
-         <div className="flex flex-row"> <p className=" ml-10 text-lg font-bold"> Number: </p><p className="ml-2">{profile[0].mobile_number} </p></div>
+         <div className="flex flex-row"> <p className=" ml-10 text-lg font-bold"> Number: </p><p className="ml-2"><span>{0}</span>{profile[0].mobile_number} </p></div>
           </div>
         </div>
        {/* message Vendor */}
