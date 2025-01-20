@@ -82,7 +82,7 @@ import Loading from './loading';
           </div>
           <h3 className="text-sm text-gray-500">{vendor.vendor_name}</h3>
           <div className="mt-1">
-            <span className="font-bold">${vendor.price}</span> 
+            <span className="font-bold">GH&#8373;{vendor.price}</span> 
           </div>
         </Link>
     
