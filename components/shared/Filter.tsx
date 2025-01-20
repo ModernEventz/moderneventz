@@ -204,7 +204,7 @@ const Filter = ({ filters, otherClasses, containerClasses }: Props) => {
  <button type="button" className="rounded-lg bg-rose-600 px-3 py-2 text-sm font-medium leading-6 text-white">Check availability</button>
  </div>
  <p className="col-start-1 mt-4 text-sm leading-6 dark:text-slate-400 sm:col-span-2 lg:col-span-1 lg:row-start-4 lg:mt-6">
- This sunny and spacious room is for those traveling light and looking for a comfy and cosy place to lay their head for a night or two. This beach house sits in a vibrant neighborhood littered with cafes, pubs, restaurants and supermarkets and is close to all the major attractions such as Edinburgh Castle and Arthur's Seat.
+ 
  </p>
  
  </div>
