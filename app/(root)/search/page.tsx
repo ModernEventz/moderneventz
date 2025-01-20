@@ -78,7 +78,7 @@ export default function SearchResults() {
           </div>
           <h3 className="text-sm text-gray-500">{result.vendor_name}</h3>
           <div className="mt-1">
-            <span className="font-bold">${result.price}</span> per night
+            <span className="font-bold">${result.price}</span>
           </div>
         </Link>
 
