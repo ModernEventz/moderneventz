@@ -84,7 +84,7 @@ import Loading from './loading';
             {vendor.price ? (
                         <span className="font-bold">GH&#8373;{vendor.price}</span> 
       ) : (
-            <span className="font-bold">call for price info</span> 
+            <span className="font-bold">Call For Price Info</span> 
        )
             }
           </div>
