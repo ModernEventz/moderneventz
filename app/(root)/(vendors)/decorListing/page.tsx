@@ -80,7 +80,12 @@ import Spinner from '@/components/spinner';
           </div>
           <h3 className="text-sm text-gray-500">{vendor.vendor_name}</h3>
           <div className="mt-1">
-            <span className="font-bold">GH&#8373;{vendor.price}</span>
+            {vendor.price ? (
+                        <span className="font-bold">GH&#8373;{vendor.price}</span> 
+      ) : (
+            <span className="font-bold">Call For Price Info</span> 
+       )
+            }
           </div>
         </Link>
     
