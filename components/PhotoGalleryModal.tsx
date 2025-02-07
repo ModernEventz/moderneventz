@@ -1,7 +1,7 @@
 // File: components/PhotoGalleryModal.tsx
+// File: components/PhotoGalleryModal.tsx
 "use client";
 import React from "react";
-import Image from "next/image";
 
 interface PhotoGalleryModalProps {
   images: string[];
@@ -28,6 +28,14 @@ const PhotoGalleryModal: React.FC<PhotoGalleryModalProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((url, index) => (
             <div key={index} className="w-full h-64 relative">
+              {/* Using a native <img> tag for testing */}
+              <img
+                src={url}
+                alt={`${vendorName} photo ${index + 1}`}
+                className="object-cover w-full h-full rounded-lg"
+              />
+              {/*
+              // Alternatively, if you prefer Next.js Image component:
               <Image
                 src={url}
                 alt={`${vendorName} photo ${index + 1}`}
@@ -35,6 +43,7 @@ const PhotoGalleryModal: React.FC<PhotoGalleryModalProps> = ({
                 style={{ objectFit: "cover" }}
                 className="rounded-lg"
               />
+              */}
             </div>
           ))}
         </div>
