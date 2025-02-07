@@ -21,7 +21,7 @@ const PhotoGalleryModal: React.FC<PhotoGalleryModalProps> = ({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-white text-3xl font-bold"
+          className="absolute top-0 right-2 text-white text-3xl font-bold"
         >
           &times;
         </button>
