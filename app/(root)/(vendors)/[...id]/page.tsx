@@ -69,8 +69,8 @@ const Page = async ({ params }: ParamsProps) => {
           />
         </div>
         
-        {/* Existing gallery (could be a preview) */}
-        <PlaceGallery vendorImages={images} name={vendor_name} />
+        {/*   Existing gallery (could be a preview) 
+        <PlaceGallery vendorImages={images} name={vendor_name} />  */}
         
         {/* New "Show More Photos" interactive gallery */}
         <PhotoGalleryWrapper images={images} vendorName={vendor_name} />
