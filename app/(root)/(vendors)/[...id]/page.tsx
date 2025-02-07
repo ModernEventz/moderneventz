@@ -141,18 +141,27 @@ const Page = async ({ params }: ParamsProps) => {
           <div className="grid grid-cols-2 gap-4">
             {reviews.map((review: any, index: any) => {
               if (index > 3) return null;
-              return (
-                <React.Fragment key={review.review_id}>
-                  <div className="mb-4 mt-2 text-sm leading-5 text-gray-700">
-                    <RatingDetails reviews={review} />
-                  </div>
-                  {index === 3 && (
-                    <div>
-                      <ShowAllReviews Reviews={reviews} />
-                    </div>
-                  )}
-                </React.Fragment>
-              );
+      return (
+              <>
+              
+              <div  
+               className="mb-4 mt-2 text-sm leading-5 text-gray-700 " key={review.review_id}>{<RatingDetails reviews={review} />}</div> 
+            
+             
+                 { index === 3 && (
+                   
+               <div>
+
+
+
+              <ShowAllReviews Reviews={reviews}/>
+
+                </div> )
+                
+        
+                }
+                </>
+                 )
             })}
           </div>
         </div>
