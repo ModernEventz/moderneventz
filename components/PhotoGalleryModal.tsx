@@ -2,6 +2,7 @@
 // File: components/PhotoGalleryModal.tsx
 "use client";
 import React from "react";
+import Image from "next/image";
 
 interface PhotoGalleryModalProps {
   images: string[];
@@ -24,18 +25,17 @@ const PhotoGalleryModal: React.FC<PhotoGalleryModalProps> = ({
         >
           &times;
         </button>
-        {/* Image Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {/* Image Grid with vertical scrolling for smaller screens */}
+        <div className="max-h-[80vh] overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((url, index) => (
             <div key={index} className="w-full h-64 relative">
-              {/* Using a native <img> tag for testing */}
+              {/* Using native <img> tag for testing, switch back to Next.js <Image> once confirmed */}
               <img
                 src={url}
                 alt={`${vendorName} photo ${index + 1}`}
                 className="object-cover w-full h-full rounded-lg"
               />
               {/*
-              // Alternatively, if you prefer Next.js Image component:
               <Image
                 src={url}
                 alt={`${vendorName} photo ${index + 1}`}
