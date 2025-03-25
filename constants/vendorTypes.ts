@@ -57,49 +57,37 @@ export default  vendorTypes = [
       image: ("/assets/images/makeup.jpg"),
       url:'/makeupListing?category=makeup'
     },
+ 
     {
       id: 8,
-      title: "Rings",
-      image: ("/assets/images/rings.jpg"),
-      url:'/ringsListing?category=rings'
-    
-    },
-    {
-      id: 9,
-      title: "Transport",
+      title: "Car Rental",
       image: ("/assets/images/transport.jpg"),
       url:'/transportListing?category=transport'
    
     },
         {
-      id: 10,
+      id: 9,
       title: "Sound System",
       image: ("/assets/images/sound-system.jpg"),
       url:'/transportListing?category=sound'
    
     },    {
-      id: 11,
+      id: 10,
       title: "Chairs&Canopy",
       image: ("/assets/images/canopy-chairs.jpg"),
       url:'/transportListing?category=canopy'
    
     },
         {
-      id: 12,
+      id: 11,
       title: "Cake",
       image: ("/assets/images/wedding-cake.jpg"),
       url:'/transportListing?category=cake'
    
     },
-          {
-      id: 13,
-      title: "invitation Cards",
-      image: ("/assets/images/invitation-card.jpg"),
-      url:'/transportListing?category=invitation-card'
-   
-    },
+      
     {
-      id: 14,
+      id: 12,
       title: "Ushers",
       image: ("/assets/images/ushers.jpg"),
       url:'/transportListing?category=ushers'
